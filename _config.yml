@@ -44,7 +44,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: 
   github: emyrael
-  linkedin:"https://www.linkedin.com/in/Emmanuel-Onwubuya/"
+  linkedin: "https://www.linkedin.com/in/Emmanuel-Onwubuya/"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
