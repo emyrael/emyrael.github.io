@@ -15,10 +15,11 @@ author: Emmanuel Onwubuya
 
 navbar-links:
   About Me: "aboutme"
+  CV: "Emmanuel.pdf"
   Projects:
     - Python: 
     - Tableau: "https://public.tableau.com/app/profile/emmanuel7056/viz/TradeAnalysis_16481620151730/KPITrader"
-  Author's home: "https://deanattali.com"
+  
 
 # --- Logo --- #
 
@@ -43,7 +44,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: 
   github: emyrael
-  linkedin: daattali
+  linkedin:"https://www.linkedin.com/in/Emmanuel-Onwubuya/"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
