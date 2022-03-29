@@ -17,7 +17,7 @@ navbar-links:
   About Me: "aboutme"
   CV: "Onwubuya_Emmanuel_Resume.pdf"
   Projects:
-    - Python: 
+    - Python: "https://github.com/emyrael"
     - Tableau: "https://public.tableau.com/app/profile/emmanuel7056/viz/TradeAnalysis_16481620151730/KPITrader"
   
 
