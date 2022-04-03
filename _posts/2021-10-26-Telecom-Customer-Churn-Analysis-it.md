@@ -20,3 +20,5 @@ Logistic Regression (Scikit-Learn) Multi-Layer Perceptron (Scikit-Learn) Gradien
 By looking at the score metrics and speed performance, the model I would chose is the SVM package. But the XGBoost is close behind.
 
 However, I still believe I can improve the accuracy by applying feature engineering on the data, as well trying other models, even doing an ensemble model over all the tested models.
+
+Here is a link to the complete code on Jupyter notebook [Click here](https://github.com/emyrael/Customer-churn-analysis).
