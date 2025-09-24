@@ -1,5 +1,410 @@
----
-layout: home
-title: My Portfolio
-subtitle: This is where I tell everyone way too much about me
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Onwubuya - Data Engineer & AI Practitioner</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Emmanuel Onwubuya</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">
+                        <i class="fas fa-building"></i>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">
+                        <i class="fas fa-code"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-social">
+                <a href="https://github.com/Emyrael" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/Emmanuel-Onwubuya" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:emyraeleson@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Tech Elements -->
+    <div class="floating-elements">
+        <div class="floating-element element-1">⚡</div>
+        <div class="floating-element element-2">🔧</div>
+        <div class="floating-element element-3">💻</div>
+        <div class="floating-element element-4">🚀</div>
+        <div class="floating-element element-5">⚙️</div>
+        <div class="floating-element element-6">🎯</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-tagline">DATA ENGINEER & AI PRACTITIONER</h2>
+                    <h1 class="hero-name">
+                        <span class="name-first">Emmanuel</span>
+                        <span class="name-last">Onwubuya</span>
+                    </h1>
+                    <p class="hero-description">
+                        Building robust data pipelines and AI-driven solutions that power modern businesses.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://github.com/Emyrael" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            View GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/Emmanuel-Onwubuya" class="btn btn-secondary" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                    <a href="#about" class="learn-more">
+                        Learn more about me
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-card">
+                    <img src="profile_pic.JPG" alt="Emmanuel Onwubuya" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>High-impact Data Engineer with <strong>4+ years of experience</strong> building scalable data pipelines, designing resilient data models, and leading cloud-based data platform migrations. Adept at translating complex business needs into robust, production-grade data solutions that power analytics, machine learning and real-time decision-making.</p>
+                    
+                    <p>Skilled in <strong>Python, SQL and Spark</strong>, with hands-on experience using tools and platforms such as dbt, Databricks, Airflow and Terraform. Deep understanding of data modeling, orchestration, CI/CD and cloud infrastructure (AWS, Azure, GCP).</p>
+                    
+                    <p>Passionate about <strong>building innovative AI applications</strong> that solve real-world problems. Currently developing cutting-edge projects including <strong>Ufindar</strong> - an AI-powered university search tool using LangChain and semantic search, and <strong>Ginja App</strong> - a revolutionary AI platform that will transform how businesses and individuals interact with artificial intelligence technology. These projects showcase my expertise in applying LLMs and AI to create practical, user-friendly solutions that bridge the gap between complex AI capabilities and everyday usability.</p>
+                    
+                    <p>Known for improving pipeline performance, ensuring data integrity and bridging technical depth with business context to deliver measurable impact. I thrive on transforming complex AI concepts into accessible, production-ready applications that drive business value.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Engineering</h3>
+                        <p>4+ years building scalable pipelines and data platforms.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Applications</h3>
+                        <p>Building Ufindar, Ginja App, and innovative AI solutions.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud Platforms</h3>
+                        <p>Expert in AWS, Azure, GCP, and modern data stacks.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Transforming complex AI concepts into user-friendly applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">A comprehensive toolkit built through years of hands-on experience in data engineering and AI.</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code category-icon"></i>
+                        <h3>Programming & Scripting</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge blue">Python</span>
+                        <span class="skill-badge blue">SQL</span>
+                        <span class="skill-badge blue">PySpark</span>
+                        <span class="skill-badge blue">Bash</span>
+                        <span class="skill-badge blue">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools category-icon"></i>
+                        <h3>Tools & Frameworks</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge green">Databricks</span>
+                        <span class="skill-badge green">DBT</span>
+                        <span class="skill-badge green">Supabase</span>
+                        <span class="skill-badge green">Airflow</span>
+                        <span class="skill-badge green">Terraform</span>
+                        <span class="skill-badge green">Docker</span>
+                        <span class="skill-badge green">Git</span>
+                        <span class="skill-badge green">CI/CD</span>
+                        <span class="skill-badge green">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cloud category-icon"></i>
+                        <h3>Cloud & Platforms</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge purple">Azure</span>
+                        <span class="skill-badge purple">AWS</span>
+                        <span class="skill-badge purple">GCP</span>
+                        <span class="skill-badge purple">Snowflake</span>
+                        <span class="skill-badge purple">Databricks</span>
+                        <span class="skill-badge purple">Tableau</span>
+                        <span class="skill-badge purple">Looker</span>
+                        <span class="skill-badge purple">Power BI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database category-icon"></i>
+                        <h3>Data Engineering & AI</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="skill-badge orange">ETL/ELT</span>
+                        <span class="skill-badge orange">Data Warehousing</span>
+                        <span class="skill-badge orange">Data Modeling</span>
+                        <span class="skill-badge orange">Data Quality</span>
+                        <span class="skill-badge orange">Workflow Orchestration</span>
+                        <span class="skill-badge orange">Prompt Engineering</span>
+                        <span class="skill-badge orange">Model Context Protocol</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Data Engineer</h3>
+                                <span class="company">Wefra Life</span>
+                                <span class="period">Frankfurt, Germany • 2024 – Present</span>
+                            </div>
+                            <div class="experience-details">
+                                <p>Leading cloud-based data platform migrations and building scalable data pipelines for financial services. Implementing modern data engineering practices with focus on data quality and real-time analytics. Successfully reduced data processing time by 60% and improved system reliability to 99.9% uptime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Data Engineer</h3>
+                                <span class="company">Accenture</span>
+                                <span class="period">Hamburg, Germany • 2022 – 2024</span>
+                            </div>
+                            <div class="experience-details">
+                                <p>Designed and implemented resilient data models for enterprise clients across multiple industries. Collaborated with cross-functional teams to deliver production-grade data solutions that enhanced business decision-making capabilities. Led a team of 5 engineers and delivered 15+ successful data platform implementations, resulting in 40% improvement in data processing efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Junior Data Engineer</h3>
+                                <span class="company">Domicil Real Estate Group</span>
+                                <span class="period">Munich, Germany • 2021 – 2022</span>
+                            </div>
+                            <div class="experience-details">
+                                <p>Built foundational data pipelines and contributed to data infrastructure improvements for real estate analytics platform. Gained hands-on experience with cloud platforms and modern data engineering tools. Successfully implemented ETL processes that processed 1M+ property records daily, improving data accuracy by 35% and reducing manual processing time by 80%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Innovative solutions showcasing expertise in data engineering and AI applications</p>
+            
+            <!-- Featured Project -->
+            <div class="featured-project">
+                <div class="project-badge">Featured Project</div>
+                <h3>Ufindar – AI-Powered University Search Tool</h3>
+                <p>Natural-language university search engine that uses LangChain and Supabase with embedding-based semantic search. Allows users to find universities via conversational queries; backend built with Python and deployed as a live prototype.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">LangChain</span>
+                    <span class="tech-badge">Supabase</span>
+                    <span class="tech-badge">Semantic Search</span>
+                    <span class="tech-badge">AI</span>
+                    <span class="tech-badge">Natural Language Processing</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://dev.ufindar.com" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other Projects -->
+            <div class="projects-grid" id="github-projects">
+                <!-- GitHub projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Ready to discuss data engineering opportunities or collaborate on innovative projects.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>I'm always interested in discussing new opportunities, innovative projects, or collaborating on data engineering and AI initiatives. Let's connect!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>emyraeleson@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Emyrael</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>Emmanuel-Onwubuya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="final_resume.pdf" class="btn btn-outline download-resume" download="Emmanuel_Onwubuya_Resume.pdf">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Send Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Emmanuel Onwubuya. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Emyrael" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/Emmanuel-Onwubuya" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:emyraeleson@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>
