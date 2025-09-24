@@ -187,17 +187,7 @@ async function loadGitHubProjects() {
         // Filter and display additional projects (not already in static projects)
         const staticProjectNames = ['End-to-End-Self-Driving-via-Convolutional-Neural-Networks-', 'Ginja App', 'Data Pipeline Automation'];
         
-        const additionalRepos = repos.filter(repo => 
-            !repo.fork && 
-            repo.name !== 'emyrael.github.io' && 
-            repo.description &&
-            !staticProjectNames.some(name => repo.name.toLowerCase().includes(name.toLowerCase()))
-        ).slice(0, 2); // Only add 2 additional projects
-        
-        additionalRepos.forEach(repo => {
-            const projectCard = createProjectCard(repo);
-            projectsGrid.appendChild(projectCard);
-        });
+        // Only show the top 3 static projects, no additional GitHub repos
         
     } catch (error) {
         console.error('Error loading GitHub projects:', error);
@@ -208,13 +198,16 @@ async function loadGitHubProjects() {
 function createProjectCard(repo) {
     const card = document.createElement('div');
     card.className = 'project-card';
+    card.style.backgroundColor = '#1f2937';
+    card.style.border = '1px solid #374151';
+    card.style.color = '#f9fafb';
     
     const languages = repo.language || 'Various';
     const topics = repo.topics ? repo.topics.slice(0, 3) : [];
     
     card.innerHTML = `
-        <h3>${repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
-        <p>${repo.description || 'No description available'}</p>
+        <h3 style="color: #f9fafb !important;">${repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
+        <p style="color: #e5e7eb !important;">${repo.description || 'No description available'}</p>
         <div class="project-tech">
             <span class="tech-badge">${languages}</span>
             ${topics.map(topic => `<span class="tech-badge">${topic}</span>`).join('')}
@@ -222,11 +215,11 @@ function createProjectCard(repo) {
         <div class="project-stats">
             <div class="stat">
                 <i class="fas fa-star"></i>
-                <span>${repo.stargazers_count}</span>
+                <span style="color: #d1d5db !important;">${repo.stargazers_count}</span>
             </div>
             <div class="stat">
                 <i class="fas fa-code-branch"></i>
-                <span>${repo.forks_count}</span>
+                <span style="color: #d1d5db !important;">${repo.forks_count}</span>
             </div>
         </div>
     `;
@@ -270,12 +263,15 @@ function showStaticProjects() {
     staticProjects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
+        card.style.backgroundColor = '#1f2937';
+        card.style.border = '1px solid #374151';
+        card.style.color = '#f9fafb';
         
         if (project.special === 'coming-soon') {
             card.innerHTML = `
                 <div class="coming-soon-badge">Coming Soon</div>
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <h3 style="color: #f9fafb !important;">${project.name}</h3>
+                <p style="color: #e5e7eb !important;">${project.description}</p>
                 <div class="project-tech">
                     ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
                 </div>
@@ -288,19 +284,19 @@ function showStaticProjects() {
             `;
         } else {
             card.innerHTML = `
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <h3 style="color: #f9fafb !important;">${project.name}</h3>
+                <p style="color: #e5e7eb !important;">${project.description}</p>
                 <div class="project-tech">
                     ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
                 </div>
                 <div class="project-stats">
                     <div class="stat">
                         <i class="fas fa-star"></i>
-                        <span>${project.stats.stars}</span>
+                        <span style="color: #d1d5db !important;">${project.stats.stars}</span>
                     </div>
                     <div class="stat">
                         <i class="fas fa-code-branch"></i>
-                        <span>${project.stats.forks}</span>
+                        <span style="color: #d1d5db !important;">${project.stats.forks}</span>
                     </div>
                 </div>
                 ${project.link ? `<div class="project-actions">
@@ -416,6 +412,7 @@ const additionalCSS = `
         font-size: 0.8rem;
         font-weight: 600;
         animation: pulse 2s infinite;
+        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
     }
     
     @keyframes pulse {
