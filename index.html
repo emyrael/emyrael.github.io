@@ -9,11 +9,11 @@
     <meta property="og:description" content="AI Engineer building production LLM systems, data platforms, and AI-powered products including Ginja and Aixelar.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#07111f">
+    <meta name="theme-color" content="#050914">
     <link rel="stylesheet" href="assets/css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -28,8 +28,8 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#build" class="nav-link">Build</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-social" aria-label="Social links">
@@ -48,178 +48,82 @@
 
     <main id="main">
         <section id="hero" class="hero">
-            <div class="ambient ambient-one"></div>
-            <div class="ambient ambient-two"></div>
+            <div class="glow glow-one"></div>
+            <div class="glow glow-two"></div>
             <div class="hero-container">
-                <div class="hero-content reveal">
-                    <p class="eyebrow">AI Engineer / Data Engineer / Founder</p>
-                    <h1>AI Engineer building production LLM systems and data platforms.</h1>
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">AI Engineer · Founder · Data Systems Builder</p>
+                    <h1>I build production AI systems, data platforms, and AI products.</h1>
                     <p class="hero-description">
-                        I design and ship AI-powered systems that turn complex data, workflows, and user intent into production-ready products.
+                        I'm Emmanuel Onwubuya, an AI/Data Engineer building LLM-powered systems, scalable data platforms, and real products used by people &mdash; including Ginja, an adaptive AI productivity app live on iOS and Android.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="https://ginja.io" class="btn btn-primary" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                            View Ginja
-                        </a>
-                        <a href="#projects" class="btn btn-secondary">
-                            <i class="fas fa-layer-group" aria-hidden="true"></i>
-                            View Projects
-                        </a>
-                        <a href="#contact" class="btn btn-ghost">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                            Contact Me
-                        </a>
-                    </div>
-                    <div class="hero-stats" aria-label="Credibility stats">
-                        <div>
-                            <strong>4+ years</strong>
-                            <span>Engineering experience</span>
-                        </div>
-                        <div>
-                            <strong>Production AI</strong>
-                            <span>LLM systems shipped</span>
-                        </div>
-                        <div>
-                            <strong>iOS &amp; Android</strong>
-                            <span>Product launched</span>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="https://ginja.io" class="btn btn-primary" target="_blank" rel="noopener">View Ginja</a>
+                        <a href="#projects" class="btn btn-secondary">View Work</a>
+                        <a href="#contact" class="btn btn-quiet">Contact Me</a>
                     </div>
                 </div>
 
-                <div class="hero-visual reveal">
-                    <div class="visual-shell">
-                        <div class="profile-panel">
-                            <img src="profile_pic.JPG" alt="Emmanuel Onwubuya" class="profile-image">
-                            <div>
-                                <span class="panel-label">Founder &amp; Builder</span>
-                                <strong>Ginja / Aixelar</strong>
-                            </div>
-                        </div>
-                        <div class="signal-card">
-                            <div class="signal-header">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <pre><code>intent = parse(user_brain_dump)
-plan = arc.adapt(intent, progress)
-tasks = llm.tools.schedule(plan)
-ship(product, data, ai)</code></pre>
-                        </div>
-                        <div class="stack-strip">
-                            <span>OpenAI</span>
-                            <span>FastAPI</span>
-                            <span>Databricks</span>
-                            <span>Supabase</span>
-                        </div>
+                <aside class="profile-card reveal" aria-label="Profile summary">
+                    <img src="profile_pic.JPG" alt="Emmanuel Onwubuya" class="profile-image">
+                    <div class="profile-content">
+                        <p class="profile-name">Emmanuel Onwubuya</p>
+                        <p class="profile-title">AI Engineer &amp; Founder</p>
+                        <p class="profile-location">Hannover, Germany</p>
                     </div>
-                </div>
+                    <div class="profile-stack" aria-label="Core stack">
+                        <span>LLMs</span>
+                        <span>Databricks</span>
+                        <span>Supabase</span>
+                        <span>FastAPI</span>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="container credibility-strip reveal" aria-label="Credibility highlights">
+                <span>4+ Years Engineering</span>
+                <span>Production LLM Systems</span>
+                <span>iOS &amp; Android Product Launched</span>
+                <span>Data + AI Infrastructure</span>
             </div>
         </section>
 
         <section id="about" class="section about">
-            <div class="container section-grid">
-                <div class="section-heading reveal">
-                    <span class="section-kicker">About</span>
-                    <h2>Production-minded AI and data engineering.</h2>
-                </div>
-                <div class="about-copy reveal">
-                    <p>
-                        I'm Emmanuel Onwubuya, an AI/Data Engineer with 4+ years of experience building production data platforms, LLM-powered applications, RAG systems, multi-agent workflows, and cloud-based analytics systems.
-                    </p>
-                    <p>
-                        I work across Databricks, PySpark, Supabase, FastAPI, OpenAI APIs, LangChain/LangGraph, Azure, AWS, and GCP. Beyond engineering roles, I also build and launch real AI products, including Ginja, an adaptive AI productivity app live on iOS and Android.
-                    </p>
-                </div>
+            <div class="container narrow reveal">
+                <p class="section-kicker">About</p>
+                <h2>Systems thinking for AI products that need to work in the real world.</h2>
+                <p class="lead">
+                    I design and ship AI systems that combine LLMs, data infrastructure, product engineering, and cloud deployment. My work spans RAG systems, multi-agent workflows, Databricks platforms, FastAPI backends, Supabase, OpenAI APIs, and production analytics systems.
+                </p>
             </div>
         </section>
 
         <section id="build" class="section build">
             <div class="container">
-                <div class="section-heading centered reveal">
-                    <span class="section-kicker">What I Build</span>
-                    <h2>Systems that move from idea to production.</h2>
+                <div class="section-heading reveal">
+                    <p class="section-kicker">What I Build</p>
+                    <h2>Focused engineering across AI, data, and product.</h2>
                 </div>
                 <div class="build-grid">
                     <article class="build-card reveal">
-                        <i class="fas fa-brain" aria-hidden="true"></i>
-                        <h3>LLM &amp; AI Systems</h3>
-                        <p>RAG systems, multi-agent workflows, AI agents, structured outputs, tool-calling, and production LLM pipelines.</p>
+                        <span class="card-index">01</span>
+                        <h3>LLM Applications</h3>
+                        <p>RAG, agents, structured outputs, AI workflows, evaluation, and production deployment.</p>
                     </article>
                     <article class="build-card reveal">
-                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <span class="card-index">02</span>
                         <h3>Data Platforms</h3>
-                        <p>Databricks, PySpark, Medallion architecture, ETL pipelines, analytics layers, and cloud data systems.</p>
+                        <p>Databricks, PySpark, Medallion architecture, ETL/ELT, analytics layers, and cloud data systems.</p>
                     </article>
                     <article class="build-card reveal">
-                        <i class="fas fa-mobile-screen" aria-hidden="true"></i>
-                        <h3>AI Product Engineering</h3>
-                        <p>End-to-end AI products across mobile, backend, databases, subscriptions, analytics, and deployment.</p>
+                        <span class="card-index">03</span>
+                        <h3>AI Products</h3>
+                        <p>End-to-end products across mobile, backend, subscriptions, analytics, and user-facing AI.</p>
                     </article>
                     <article class="build-card reveal">
-                        <i class="fas fa-magic" aria-hidden="true"></i>
-                        <h3>Automation &amp; Internal Tools</h3>
-                        <p>AI-powered workflows, dashboards, business process automation, and natural-language interfaces.</p>
-                    </article>
-                </div>
-                <div class="credibility-strip reveal">
-                    <span>4+ years engineering experience</span>
-                    <span>Production AI systems</span>
-                    <span>iOS &amp; Android product launched</span>
-                    <span>Databricks / LLM / Cloud infrastructure</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section experience">
-            <div class="container">
-                <div class="section-heading centered reveal">
-                    <span class="section-kicker">Experience</span>
-                    <h2>Enterprise data foundations, modern AI layers.</h2>
-                </div>
-                <div class="experience-list">
-                    <article class="experience-card reveal">
-                        <div class="experience-meta">
-                            <span>2024 - Present</span>
-                            <strong>Wefra Life</strong>
-                        </div>
-                        <div>
-                            <h3>Data &amp; AI Engineer &mdash; Wefra Life</h3>
-                            <p>
-                                At Wefra Life, I build production AI systems and LLM-powered applications for business intelligence and decision support. My work includes designing multi-agent AI architectures, developing RAG pipelines, implementing structured-output workflows using OpenAI models, and building natural-language interfaces that allow business users to interact with large-scale data using plain English.
-                            </p>
-                            <p>
-                                I also build the data infrastructure behind these systems, including Databricks-based data platforms, large-scale ETL pipelines, vector search, observability, and AI evaluation workflows.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="experience-card reveal">
-                        <div class="experience-meta">
-                            <span>2022 - 2024</span>
-                            <strong>Accenture</strong>
-                        </div>
-                        <div>
-                            <h3>Data Engineer &mdash; Accenture</h3>
-                            <p>
-                                At Accenture, I built enterprise-scale data platforms and analytics systems for large clients. My work involved designing PySpark pipelines, integrating data from multiple operational systems, building automated ETL workflows, and creating reliable datasets for analytics and machine learning use cases.
-                            </p>
-                            <p>
-                                This experience gave me a strong foundation in distributed data engineering, production reliability, cloud architecture, and large-scale system design.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="experience-card reveal">
-                        <div class="experience-meta">
-                            <span>2021 - 2022</span>
-                            <strong>Domicil Real Estate Group</strong>
-                        </div>
-                        <div>
-                            <h3>Junior Data Engineer</h3>
-                            <p>
-                                Built foundational data pipelines and contributed to analytics data infrastructure for real estate workflows, strengthening practical experience in cloud systems, SQL, Python, and production data quality.
-                            </p>
-                        </div>
+                        <span class="card-index">04</span>
+                        <h3>Automation Systems</h3>
+                        <p>Internal tools, natural-language dashboards, business workflows, and decision-support systems.</p>
                     </article>
                 </div>
             </div>
@@ -227,75 +131,93 @@ ship(product, data, ai)</code></pre>
 
         <section id="projects" class="section projects">
             <div class="container">
-                <div class="section-heading centered reveal">
-                    <span class="section-kicker">Projects</span>
-                    <h2>Products and platforms with AI at the core.</h2>
+                <div class="section-heading reveal">
+                    <p class="section-kicker">Selected Work</p>
+                    <h2>Products and companies built around useful AI.</h2>
                 </div>
 
                 <article class="project-card featured-project reveal">
-                    <div class="project-topline">
-                        <span class="status-badge live">Live on iOS &amp; Android</span>
-                        <span class="featured-label">Featured Project</span>
+                    <div class="project-meta">
+                        <span>Featured</span>
+                        <span>Live</span>
                     </div>
-                    <h3>Ginja &mdash; Adaptive AI Productivity App</h3>
-                    <p>
-                        Ginja is an AI-powered planning and execution app that turns brain dumps into structured tasks, adaptive goal journeys, shared accountability, and personalized discovery. Its core feature, Arc, creates goal and habit plans that adapt as users make progress or as life changes.
-                    </p>
-                    <div class="tag-list">
-                        <span>React Native</span>
-                        <span>Supabase</span>
-                        <span>OpenAI</span>
-                        <span>FastAPI</span>
-                        <span>RevenueCat</span>
-                        <span>Calendar APIs</span>
-                        <span>AI Planning</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://ginja.io" class="btn btn-primary" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                            Visit Ginja
-                        </a>
+                    <div class="project-body">
+                        <h3>Ginja &mdash; Adaptive AI Productivity App</h3>
+                        <p>
+                            Ginja turns brain dumps into structured plans, adaptive goal journeys, shared accountability, and personalized discovery. Its core system, Arc, helps users move from intention to action as their life changes.
+                        </p>
+                        <div class="tag-list">
+                            <span>React Native</span>
+                            <span>Supabase</span>
+                            <span>OpenAI</span>
+                            <span>FastAPI</span>
+                            <span>RevenueCat</span>
+                            <span>Calendar APIs</span>
+                        </div>
+                        <a href="https://ginja.io" class="text-link" target="_blank" rel="noopener">Visit Ginja</a>
                     </div>
                 </article>
 
                 <div class="projects-grid">
                     <article class="project-card reveal">
-                        <div class="project-topline">
-                            <span class="status-badge active">Active</span>
+                        <div class="project-meta">
+                            <span>Active</span>
                         </div>
-                        <h3>Aixelar &mdash; AI Product &amp; Automation Agency</h3>
-                        <p>
-                            Aixelar is Emmanuel's agency for building AI-powered products, automations, data systems, and modern web/mobile applications for businesses.
-                        </p>
-                        <div class="tag-list">
-                            <span>AI Automation</span>
-                            <span>Web Apps</span>
-                            <span>Mobile Apps</span>
-                            <span>Data Platforms</span>
-                            <span>LLM Integrations</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://aixelar.io" class="btn btn-secondary" target="_blank" rel="noopener">
-                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                                Visit Aixelar
-                            </a>
+                        <div class="project-body">
+                            <h3>Aixelar &mdash; AI Product &amp; Automation Agency</h3>
+                            <p>
+                                Aixelar builds AI-powered products, automations, data platforms, and modern web/mobile systems for businesses.
+                            </p>
+                            <a href="https://aixelar.io" class="text-link" target="_blank" rel="noopener">Visit Aixelar</a>
                         </div>
                     </article>
 
                     <article class="project-card reveal">
-                        <div class="project-topline">
-                            <span class="status-badge soon">Coming Soon</span>
+                        <div class="project-meta">
+                            <span>Coming Soon</span>
                         </div>
-                        <h3>Ufindar &mdash; AI University Search Platform</h3>
-                        <p>
-                            Ufindar is an AI-powered university search platform that will help students discover universities and programs through natural-language search, semantic retrieval, and personalized recommendations.
-                        </p>
-                        <div class="tag-list">
-                            <span>LangChain</span>
-                            <span>Supabase</span>
-                            <span>Semantic Search</span>
-                            <span>OpenAI</span>
-                            <span>FastAPI</span>
+                        <div class="project-body">
+                            <h3>Ufindar &mdash; AI University Search Platform</h3>
+                            <p>
+                                An AI-powered university discovery platform using semantic search and personalized recommendations.
+                            </p>
+                            <span class="disabled-link" aria-disabled="true">Coming Soon</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker">Experience</p>
+                    <h2>Production systems across enterprise data and applied AI.</h2>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-card reveal">
+                        <div class="experience-meta">
+                            <span>2024 - Present</span>
+                            <strong>Wefra Life</strong>
+                        </div>
+                        <div class="experience-copy">
+                            <h3>Data &amp; AI Engineer &mdash; Wefra Life</h3>
+                            <p>
+                                At Wefra Life, I build production AI systems and LLM-powered applications for business intelligence and decision support, including RAG pipelines, structured-output workflows, natural-language analytics interfaces, and Databricks-based data platforms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-meta">
+                            <span>2022 - 2024</span>
+                            <strong>Accenture</strong>
+                        </div>
+                        <div class="experience-copy">
+                            <h3>Data Engineer &mdash; Accenture</h3>
+                            <p>
+                                At Accenture, I built enterprise-scale data pipelines and analytics systems for large clients, using PySpark, APIs, Dockerized ETL workflows, and cloud data platforms.
+                            </p>
                         </div>
                     </article>
                 </div>
@@ -304,56 +226,26 @@ ship(product, data, ai)</code></pre>
 
         <section id="skills" class="section skills">
             <div class="container">
-                <div class="section-heading centered reveal">
-                    <span class="section-kicker">Skills</span>
-                    <h2>A practical toolkit for AI products and data systems.</h2>
+                <div class="section-heading reveal">
+                    <p class="section-kicker">Stack</p>
+                    <h2>Tools I use to ship AI systems end to end.</h2>
                 </div>
                 <div class="skills-grid">
                     <article class="skill-category reveal">
                         <h3>AI Engineering</h3>
-                        <div class="tag-list">
-                            <span>OpenAI APIs</span>
-                            <span>LangChain</span>
-                            <span>LangGraph</span>
-                            <span>RAG</span>
-                            <span>Multi-agent systems</span>
-                            <span>Structured outputs</span>
-                            <span>LLM evaluation</span>
-                        </div>
+                        <p>OpenAI APIs, LangChain, LangGraph, RAG, multi-agent systems, structured outputs, LLM evaluation</p>
                     </article>
                     <article class="skill-category reveal">
                         <h3>Data Engineering</h3>
-                        <div class="tag-list">
-                            <span>Databricks</span>
-                            <span>PySpark</span>
-                            <span>dbt</span>
-                            <span>Airflow</span>
-                            <span>SQL</span>
-                            <span>Medallion Architecture</span>
-                        </div>
+                        <p>Databricks, PySpark, dbt, Airflow, SQL, Medallion Architecture</p>
                     </article>
                     <article class="skill-category reveal">
                         <h3>Backend &amp; Cloud</h3>
-                        <div class="tag-list">
-                            <span>FastAPI</span>
-                            <span>Supabase</span>
-                            <span>PostgreSQL</span>
-                            <span>Docker</span>
-                            <span>Terraform</span>
-                            <span>Azure</span>
-                            <span>AWS</span>
-                            <span>GCP</span>
-                        </div>
+                        <p>FastAPI, Supabase, PostgreSQL, Docker, Terraform, Azure, AWS, GCP</p>
                     </article>
                     <article class="skill-category reveal">
                         <h3>Product Engineering</h3>
-                        <div class="tag-list">
-                            <span>React Native</span>
-                            <span>TypeScript</span>
-                            <span>RevenueCat</span>
-                            <span>Analytics</span>
-                            <span>CI/CD</span>
-                        </div>
+                        <p>React Native, TypeScript, RevenueCat, analytics, CI/CD</p>
                     </article>
                 </div>
             </div>
@@ -361,25 +253,16 @@ ship(product, data, ai)</code></pre>
 
         <section id="contact" class="section contact">
             <div class="container contact-grid">
-                <div class="section-heading reveal">
-                    <span class="section-kicker">Contact</span>
-                    <h2>Want to build an AI system, data platform, or production-grade AI product? Let's talk.</h2>
+                <div class="contact-copy reveal">
+                    <p class="section-kicker">Contact</p>
+                    <h2>Building an AI product or data platform?</h2>
                     <p>
-                        I work with teams and founders who need reliable AI systems, strong data foundations, and products that can survive real users.
+                        I work with founders and teams who need production-grade AI systems, reliable data foundations, and elegant product engineering.
                     </p>
                     <div class="contact-links">
-                        <a href="mailto:emyraeleson@gmail.com">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            emyraeleson@gmail.com
-                        </a>
-                        <a href="https://github.com/Emyrael" target="_blank" rel="noopener">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            github.com/Emyrael
-                        </a>
-                        <a href="https://linkedin.com/in/Emmanuel-Onwubuya" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            Emmanuel-Onwubuya
-                        </a>
+                        <a href="mailto:emyraeleson@gmail.com">emyraeleson@gmail.com</a>
+                        <a href="https://github.com/Emyrael" target="_blank" rel="noopener">github.com/Emyrael</a>
+                        <a href="https://linkedin.com/in/Emmanuel-Onwubuya" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                 </div>
 
@@ -396,14 +279,8 @@ ship(product, data, ai)</code></pre>
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Tell me what you want to build..." required></textarea>
 
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                        Send Message
-                    </button>
-                    <a href="Emmanuel_Onwubuya_Data_Engineer_Resume.pdf" class="resume-link" download="Emmanuel_Onwubuya_Resume.pdf">
-                        <i class="fas fa-download" aria-hidden="true"></i>
-                        Download Resume
-                    </a>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <a href="Emmanuel_Onwubuya_Resume_AI_Engineer%202.pdf" class="resume-link" download="Emmanuel_Onwubuya_Resume_AI_Engineer.pdf">Download Resume</a>
                 </form>
             </div>
         </section>
