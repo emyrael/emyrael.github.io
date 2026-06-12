@@ -99,6 +99,19 @@ textarea {
     transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.navbar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(154, 215, 255, 0.72), rgba(191, 247, 223, 0.58), transparent);
+    opacity: 0.65;
+    transform: translateX(-35%);
+    animation: navGlow 8s ease-in-out infinite;
+}
+
 .navbar.scrolled {
     background: rgba(5, 9, 20, 0.93);
     border-color: rgba(226, 232, 240, 0.18);
@@ -143,11 +156,24 @@ textarea {
     border: 1px solid rgba(226, 232, 240, 0.18);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
     box-shadow: none;
+    animation: logoBreath 5.5s ease-in-out infinite;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .logo-text {
     color: var(--text);
     font-size: 0.95rem;
+    transition: color 0.25s ease;
+}
+
+.nav-logo:hover .logo-mark {
+    transform: translateY(-2px) scale(1.04);
+    border-color: rgba(154, 215, 255, 0.48);
+    box-shadow: 0 14px 36px rgba(154, 215, 255, 0.14);
+}
+
+.nav-logo:hover .logo-text {
+    color: #ffffff;
 }
 
 .nav-menu {
@@ -158,6 +184,7 @@ textarea {
 }
 
 .nav-link {
+    position: relative;
     display: inline-flex;
     min-height: 2.1rem;
     align-items: center;
@@ -167,13 +194,35 @@ textarea {
     text-decoration: none;
     font-size: 0.84rem;
     font-weight: 650;
-    transition: color 0.2s ease, background 0.2s ease;
+    overflow: hidden;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.28rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue), var(--teal), transparent);
+    opacity: 0;
+    transform: scaleX(0.25);
+    transform-origin: center;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--text);
     background: rgba(255, 255, 255, 0.055);
+    transform: translateY(-1px);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .nav-social,
@@ -220,7 +269,7 @@ textarea {
     filter: blur(72px);
     opacity: 0.28;
     pointer-events: none;
-    animation: drift 18s ease-in-out infinite;
+    animation: drift 18s ease-in-out infinite, glowPulse 7s ease-in-out infinite;
 }
 
 .ambient-one {
@@ -276,6 +325,30 @@ textarea {
     font-weight: 850;
 }
 
+.hero-content .eyebrow,
+.hero-content h1,
+.hero-content .hero-description,
+.hero-content .hero-buttons,
+.hero-content .hero-stats {
+    animation: heroFadeUp 0.85s ease both;
+}
+
+.hero-content h1 {
+    animation-delay: 0.08s;
+}
+
+.hero-content .hero-description {
+    animation-delay: 0.16s;
+}
+
+.hero-content .hero-buttons {
+    animation-delay: 0.24s;
+}
+
+.hero-content .hero-stats {
+    animation-delay: 0.32s;
+}
+
 .hero-description {
     max-width: 650px;
     margin: 1.35rem 0 0;
@@ -291,6 +364,7 @@ textarea {
 }
 
 .btn {
+    position: relative;
     min-height: 2.75rem;
     display: inline-flex;
     align-items: center;
@@ -303,11 +377,29 @@ textarea {
     font-size: 0.92rem;
     font-weight: 760;
     cursor: pointer;
+    overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -45%;
+    width: 38%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+    transform: skewX(-18deg);
+    opacity: 0;
 }
 
 .btn:hover {
     transform: translateY(-2px);
+}
+
+.btn:hover::before {
+    opacity: 1;
+    animation: buttonSheen 0.85s ease;
 }
 
 .btn-primary {
@@ -367,6 +459,7 @@ textarea {
 .hero-visual {
     justify-self: end;
     width: 100%;
+    animation: heroFloat 7s ease-in-out infinite;
 }
 
 .visual-shell {
@@ -379,6 +472,7 @@ textarea {
         rgba(6, 12, 23, 0.76);
     box-shadow: var(--shadow);
     overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .visual-shell::before {
@@ -388,7 +482,29 @@ textarea {
     border-radius: inherit;
     background: linear-gradient(120deg, transparent, rgba(154, 215, 255, 0.14), transparent);
     transform: translateX(-100%);
-    animation: sheen 7s ease-in-out infinite;
+    animation: sheen 5.5s ease-in-out infinite;
+}
+
+.visual-shell::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(154, 215, 255, 0.35), transparent 28%, rgba(191, 247, 223, 0.2) 68%, transparent) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    opacity: 0.55;
+    pointer-events: none;
+    animation: cardBorderGlow 6s ease-in-out infinite;
+}
+
+.visual-shell:hover {
+    transform: translateY(-4px);
+    border-color: rgba(154, 215, 255, 0.34);
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.42);
 }
 
 .profile-panel,
@@ -407,6 +523,13 @@ textarea {
     border: 1px solid var(--border);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.045);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.profile-panel:hover {
+    transform: translateY(-2px);
+    border-color: rgba(154, 215, 255, 0.28);
+    background: rgba(255, 255, 255, 0.065);
 }
 
 .profile-image {
@@ -433,6 +556,13 @@ textarea {
     border-radius: 8px;
     border: 1px solid rgba(154, 215, 255, 0.18);
     background: rgba(4, 10, 20, 0.72);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.signal-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(191, 247, 223, 0.28);
+    background: rgba(4, 10, 20, 0.86);
 }
 
 .signal-header {
@@ -920,12 +1050,81 @@ pre {
     }
 }
 
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.22;
+    }
+    50% {
+        opacity: 0.38;
+    }
+}
+
+@keyframes navGlow {
+    0%, 100% {
+        opacity: 0.35;
+        transform: translateX(-42%) scaleX(0.72);
+    }
+    50% {
+        opacity: 0.85;
+        transform: translateX(42%) scaleX(0.92);
+    }
+}
+
+@keyframes logoBreath {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(154, 215, 255, 0);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(154, 215, 255, 0.12);
+    }
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes buttonSheen {
+    from {
+        left: -45%;
+    }
+    to {
+        left: 115%;
+    }
+}
+
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
 @keyframes sheen {
     0%, 38% {
         transform: translateX(-100%);
     }
     62%, 100% {
         transform: translateX(100%);
+    }
+}
+
+@keyframes cardBorderGlow {
+    0%, 100% {
+        opacity: 0.35;
+    }
+    50% {
+        opacity: 0.72;
     }
 }
 
