@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const subject = formData.get("subject") || "Contact from Portfolio";
             const message = formData.get("message") || "";
             const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-            const mailtoLink = `mailto:emyraeleson@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoLink = `mailto:manuel@ginja.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
             window.location.href = mailtoLink;
             showNotification("Email client opened. Please send your message.");
