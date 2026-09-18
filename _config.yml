@@ -6,7 +6,19 @@
 # --- Required options --- #
 
 # Name of website
-title: "Emmanuel Onwubuya — AI Engineer & Founder"
+title: "Emmanuel Onwubuya — Forward Deployed Engineer & Senior AI Engineer"
+
+# Short description of your site
+description: "Forward Deployed Engineer and Senior AI Engineer building production LLM systems, AI products and data platforms. Creator of Ginja and the open-source Daygent lineage tool."
+
+# GitHub Actions
+repository: "emyrael/emyrael.github.io"
+url: "https://emyrael.github.io"
+baseurl: ""
+
+# --- Local development options ---
+# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
+# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
 
 # Your name to show in the footer
 author: Emmanuel Onwubuya
@@ -14,21 +26,16 @@ author: Emmanuel Onwubuya
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
-  CV: "Onwubuya_Emmanuel_Resume.pdf"
-  Projects:
-    - Python: "https://github.com/emyrael"
-    - Tableau: "https://public.tableau.com/app/profile/emmanuel7056/viz/TradeAnalysis_16481620151730/KPITrader"
-  
+  Portfolio: "/"
 
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/personal_photo.png"
+# The custom homepage uses a typographic EO mark instead of a profile avatar.
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+round-avatar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
@@ -41,11 +48,8 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "manuel@ginja.io"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: 
   github: emyrael
-  linkedin: "Emmanuel-Onwubuya/"
-#  medium: yourname
+  linkedin: "Emmanuel-Onwubuya"
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -53,7 +57,7 @@ social-network-links:
 #  snapchat: deanat78
 #  instagram: deanat78
 #  spotify: yourname
-  telephone: +4915739814757
+#  telephone: +14159998888
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
@@ -62,18 +66,17 @@ social-network-links:
 #  mastodon: instance.url/@username
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
-#  discord: invite/invite_code or users/userid 
 
-# If you want your website to generate an RSS feed, provide a description
-# The URL for the feed will be https://<your_website>/feed.xml
-#rss-description: This website is a virtual proof that I'm awesome
+# If you want to show a link to an RSS in the footer, add the site description here.
+# If you don't want to show an RSS link, remove the following line.
+# No blog feed is exposed from the custom portfolio homepage.
 
 # --- General options --- #
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: false
-  facebook: false
+  twitter: true
+  facebook: true
   linkedin: true
   vk: false
 
@@ -90,11 +93,8 @@ feed_show_excerpt: true
 # Whether or not to show a list of tags below each post preview in the feed page
 feed_show_tags: true
 
-# Add a search button to the navbar
-post_search: true
-
 # The keywords to associate with your website, for SEO purposes
-keywords: "Emmanuel Onwubuya, AI Engineer, Data Engineer, LLM systems, data platforms, Ginja, Aixelar"
+keywords: "Emmanuel Onwubuya, Forward Deployed Engineer, AI Engineer, Applied AI, LLM Engineer, RAG, LangGraph, Data Engineer, Databricks, FastAPI, Python, AI Platform Engineer"
 
 # --- Colours / background image --- #
 
@@ -110,7 +110,6 @@ hover-col: "#0085A1"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -120,7 +119,7 @@ footer-hover-col: "#0085A1"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#060b12"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 #site-css:
@@ -137,9 +136,6 @@ footer-hover-col: "#0085A1"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
 #google_analytics: ""
-
-# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
-#cloudflare_analytics: ""
 
 # Google Tag Manager ID
 #gtm: ""
@@ -176,29 +172,10 @@ footer-hover-col: "#0085A1"
 # https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
 # instructions. For any support with staticman please direct questions to staticman and 
 # not to BeautifulJekyll.
-#staticman:
-#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-#  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
+staticman: {}
 #  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
 #    siteKey  : # You need to apply for a site key on Google
 #    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
-
-# To use giscus comments:
-# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository, 
-# (2) Install the giscus app in your repository (details at https://giscus.app),
-# (3) Fill in *all* the parameters below 
-# See more details about giscus and each of the following parameters at https://giscus.app
-#giscus:
-#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
-#  category: Announcements # Category name of your GitHub Discussion posts
-#  category-id: # ID of your category, retrieve this info from https://giscus.app
-#  mapping: pathname
-#  reactions-enabled: 1
-#  emit-metadata: 0
-#  theme: light
 
 # --- Misc --- #
 
@@ -211,7 +188,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Berlin"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -228,7 +205,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
+      comments: false
       social-share: true # add social media sharing buttons to all blog posts
   -
     scope:
@@ -244,8 +221,12 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - beautiful-jekyll-theme.gemspec
+  - staticman.yml
+  - .github/
   - screenshot.png
   - docs/
+  - graphify-out/
 
 plugins:
   - jekyll-paginate

@@ -1,17 +1,16 @@
-name: Beautiful Jekyll CI
-on: [push, pull_request]
+name: Build Jekyll
+
+on:
+  push:
+  pull_request:
+
 jobs:
   build:
-    name: Build Jekyll
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
-
-      - name: Build the site
-        run: bundle exec jekyll build --future
+      - run: bundle exec jekyll build --future

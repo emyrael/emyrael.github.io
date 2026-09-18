@@ -1,120 +1,87 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll("main section[id]");
-    const revealElements = document.querySelectorAll(".reveal");
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const header = document.querySelector("[data-header]");
+  const menu = document.querySelector("[data-menu]");
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const navLinks = [...document.querySelectorAll('.site-nav a[href*="#"]')];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", (event) => {
-            const targetId = link.getAttribute("href");
-            if (!targetId || !targetId.startsWith("#")) return;
+  const closeMenu = () => {
+    if (!menu || !menuToggle) return;
+    menu.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    header?.classList.remove("menu-visible");
+    document.body.classList.remove("menu-open");
+  };
 
-            const target = document.querySelector(targetId);
-            if (!target) return;
-
-            event.preventDefault();
-            const navHeight = navbar ? navbar.offsetHeight : 0;
-            const top = target.getBoundingClientRect().top + window.scrollY - navHeight + 1;
-
-            window.scrollTo({
-                top,
-                behavior: prefersReducedMotion ? "auto" : "smooth"
-            });
-        });
-    });
-
-    function updateNavbar() {
-        if (!navbar) return;
-        navbar.classList.toggle("scrolled", window.scrollY > 24);
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menu?.classList.toggle("is-open", !isOpen);
+    header?.classList.toggle("menu-visible", !isOpen);
+    document.body.classList.toggle("menu-open", !isOpen);
+  });
+  navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
+      closeMenu();
+      menuToggle.focus();
     }
+  });
+  window.addEventListener("resize", () => { if (window.innerWidth > 960) closeMenu(); }, { passive: true });
 
-    function updateActiveNav() {
-        const offset = (navbar ? navbar.offsetHeight : 0) + 80;
-        let current = "";
+  const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 24);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - offset;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-                current = section.id;
-            }
-        });
-
+  if ("IntersectionObserver" in window) {
+    const sections = navLinks.map((link) => {
+      const hash = new URL(link.href, window.location.href).hash;
+      return hash ? document.querySelector(hash) : null;
+    }).filter(Boolean);
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
         navLinks.forEach((link) => {
-            link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+          const active = new URL(link.href, window.location.href).hash === `#${entry.target.id}`;
+          link.classList.toggle("is-active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
         });
-    }
+      });
+    }, { rootMargin: "-28% 0px -62%", threshold: 0 });
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
 
-    if (prefersReducedMotion) {
-        revealElements.forEach((element) => element.classList.add("is-visible"));
-    } else if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.14,
-            rootMargin: "0px 0px -50px 0px"
-        });
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+    revealItems.forEach((item) => {
+      item.classList.add("reveal-pending");
+      revealObserver.observe(item);
+    });
+  }
 
-        revealElements.forEach((element) => observer.observe(element));
-    } else {
-        revealElements.forEach((element) => element.classList.add("is-visible"));
-    }
+  document.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const value = button.getAttribute("data-copy");
+      if (!value) return;
+      try {
+        await navigator.clipboard.writeText(value);
+        const original = button.textContent;
+        button.textContent = "Copied";
+        window.setTimeout(() => { button.textContent = original; }, 1600);
+      } catch (_) { button.textContent = "Select command"; }
+    });
+  });
 
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const formData = new FormData(contactForm);
-            const name = formData.get("name") || "";
-            const email = formData.get("email") || "";
-            const subject = formData.get("subject") || "Contact from Portfolio";
-            const message = formData.get("message") || "";
-            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-            const mailtoLink = `mailto:manuel@ginja.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            window.location.href = mailtoLink;
-            showNotification("Email client opened. Please send your message.");
-            contactForm.reset();
-        });
-    }
-
-    function showNotification(message) {
-        const existingNotification = document.querySelector(".notification");
-        if (existingNotification) existingNotification.remove();
-
-        const notification = document.createElement("div");
-        notification.className = "notification";
-        notification.innerHTML = `
-            <div class="notification-content">
-                <span>${message}</span>
-                <button class="notification-close" type="button" aria-label="Close notification">&times;</button>
-            </div>
-        `;
-
-        document.body.appendChild(notification);
-        requestAnimationFrame(() => notification.classList.add("show"));
-
-        const close = () => {
-            notification.classList.remove("show");
-            window.setTimeout(() => notification.remove(), 250);
-        };
-
-        notification.querySelector(".notification-close").addEventListener("click", close);
-        window.setTimeout(close, 5000);
-    }
-
-    updateNavbar();
-    updateActiveNav();
-    window.addEventListener("scroll", () => {
-        updateNavbar();
-        updateActiveNav();
-    }, { passive: true });
+  const year = document.querySelector("[data-current-year]");
+  if (year) year.textContent = String(new Date().getFullYear());
 });
